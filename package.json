@@ -1,0 +1,45 @@
+{
+  "name": "dsh-veil",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Credential veil for DeepSeek Harness: execution-layer secret redaction for tool results, credential-store read denial, secret egress blocking, and an untrusted-content boundary for web/MCP output.",
+  "type": "module",
+  "icon": "icon.svg",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yhl4466/dsh-veil.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yhl4466/dsh-veil/issues"
+  },
+  "homepage": "https://github.com/yhl4466/dsh-veil#readme",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node test/veil-test.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "security",
+    "secret",
+    "redaction"
+  ]
+}

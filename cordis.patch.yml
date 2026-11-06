@@ -1,0 +1,18 @@
+# dsh-veil — 执行层凭据护栏。
+# 下面每一项都可以在 profile 的 cordis.patch.yml 里覆盖（patch 的 config 是整体替换，
+# 覆盖时请把需要的字段一起写全）。所有开关默认打开，因为 ui-secret-mask 只遮显示层，
+# 不遮模型上下文与会话日志。
+- insert:
+    - id: dsh-veil
+      name: dsh-veil
+      config:
+        # 工具结果进入上下文/日志前抹掉密钥（已知真值 + 常见密钥形态）
+        redactResults: true
+        # 拒绝任何指向凭据库的读取（.credentials.yaml / .ssh / .npmrc / .netrc ...）
+        denyCredentialReads: true
+        # 出站类调用（web/mcp/带 URL/curl 等）的参数里出现密钥时直接拒绝
+        blockSecretEgress: true
+        # 给 web/mcp 外部内容加一条「不可信数据」信任边界
+        envelopeUntrusted: true
+        # 从头读取 ~/.dsh/.credentials.yaml 的真值作为已知密钥集合（只读、不落盘）
+        watchCredentialStore: true

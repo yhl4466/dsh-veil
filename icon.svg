@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Credential veil">
+  <defs>
+    <linearGradient id="veil-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1b2440"/>
+      <stop offset="1" stop-color="#0d1220"/>
+    </linearGradient>
+    <linearGradient id="veil-shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5b8cff"/>
+      <stop offset="1" stop-color="#2f5fd0"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#veil-bg)"/>
+  <path d="M32 9 L51 16 L51 30 C51 42 43 50 32 55 C21 50 13 42 13 30 L13 16 Z"
+        fill="url(#veil-shield)" opacity="0.92"/>
+  <path d="M32 9 L51 16 L51 30 C51 42 43 50 32 55 Z" fill="#ffffff" opacity="0.08"/>
+  <rect x="22" y="23" width="20" height="4" rx="2" fill="#eaf1ff" opacity="0.95"/>
+  <rect x="22" y="30" width="14" height="4" rx="2" fill="#eaf1ff" opacity="0.85"/>
+  <rect x="22" y="37" width="20" height="4" rx="2" fill="#eaf1ff" opacity="0.55"/>
+  <path d="M35 44 L44 44" stroke="#ffd166" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="32" cy="46" r="0" fill="#ffd166"/>
+</svg>

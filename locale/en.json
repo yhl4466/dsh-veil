@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Credential veil",
+    "description": "Execution-layer secret protection: redacts real credential values before tool results reach the model or session log, denies credential-store reads, blocks secret egress, and marks untrusted web/MCP content as data."
+  }
+}
